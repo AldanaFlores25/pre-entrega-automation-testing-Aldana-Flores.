@@ -6,9 +6,9 @@ import time
 def test_navegacion_catalogo(login_in_driver):
     try:
         driver = login_in_driver
-        
+
         # Configurar espera implícita de hasta 5 segundos
-        driver.implicitly_wait(5)
+        driver.implicitly_wait(3)
 
         # Verificar que el título de la página de inventario sea correcto
         assert driver.title == "Swag Labs", "El título de la página no coincide"
@@ -36,5 +36,4 @@ def test_navegacion_catalogo(login_in_driver):
     except Exception as e:
         print(f"Error en test_navegacion_inventario: {e}")
         raise
-    finally:
-        driver.quit()
+   

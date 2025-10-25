@@ -6,9 +6,9 @@ import time
 def test_carrito(login_in_driver):
     try:
         driver = login_in_driver
-        
+
         # Configurar espera implícita de hasta 5 segundos
-        driver.implicitly_wait(5)
+        driver.implicitly_wait(3)
 
         # Encuentra todos los productos
         products = driver.find_elements(By.CLASS_NAME, "inventory_item")
@@ -40,5 +40,4 @@ def test_carrito(login_in_driver):
     except Exception as e:
         print(f"Error en test_carrito: {e}")
         raise
-    finally:
-        driver.quit()
+ 
