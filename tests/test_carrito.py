@@ -1,10 +1,14 @@
 import pytest
 from selenium.webdriver.common.by import By
 from selenium import webdriver
+import time
 
 def test_carrito(login_in_driver):
     try:
         driver = login_in_driver
+        
+        # Configurar espera implícita de hasta 5 segundos
+        driver.implicitly_wait(5)
 
         # Encuentra todos los productos
         products = driver.find_elements(By.CLASS_NAME, "inventory_item")

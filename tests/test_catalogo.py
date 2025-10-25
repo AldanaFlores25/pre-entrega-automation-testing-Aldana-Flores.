@@ -1,10 +1,14 @@
 import pytest
 from selenium.webdriver.common.by import By
 from selenium import webdriver
+import time
 
 def test_navegacion_catalogo(login_in_driver):
     try:
         driver = login_in_driver
+        
+        # Configurar espera implícita de hasta 5 segundos
+        driver.implicitly_wait(5)
 
         # Verificar que el título de la página de inventario sea correcto
         assert driver.title == "Swag Labs", "El título de la página no coincide"

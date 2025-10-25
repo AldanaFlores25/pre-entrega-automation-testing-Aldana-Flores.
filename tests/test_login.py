@@ -1,11 +1,15 @@
 import pytest
 from selenium.webdriver.common.by import By
 from selenium import webdriver
+import time
 
 
 def test_login_validation(login_in_driver):
     try:
         driver = login_in_driver
+
+        # Configurar espera implícita de hasta 5 segundos
+        driver.implicitly_wait(5)
 
         assert "/inventory.html" in driver.current_url, "No se redirgio al inventario"
 
