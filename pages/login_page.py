@@ -41,3 +41,7 @@ class LoginPage:
         self.completar_pass(password)
         self.hacer_click_button()
         return self
+    
+    def obtener_error(self):
+        div_error = self.wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR,".error-message-container h3")))
+        return div_error.text
