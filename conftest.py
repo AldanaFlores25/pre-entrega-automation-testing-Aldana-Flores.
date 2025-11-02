@@ -21,18 +21,25 @@ def login_usuario():
 
 
 #podemos tambien guardar otras utilidades
+# conftest.py
 
 import pytest
+import time
 from selenium import webdriver
-from pages.login_page import LoginPage
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def driver():
-    driver = webdriver.Chrome()
-    yield driver
-    driver.quit()
-
-@pytest.fixture
-def login_in_driver(driver):
-    LoginPage(driver).abrir_pagina().login_completo("standard_user","secret_sauce")
-    return driver
+ """Fixture que proporciona un WebDriver configurado."""
+ chrome_options = Options()
+ # chrome_options.add_argument("--headless") # Para CI/CD
+ chrome_options.add_argument("--no-sandbox")
+ chrome_options.add_argument("--disable-dev-shm-usage")
+ service = Service()
+ driver = webdriver.Chrome(service=service, options=chrome_options)
+ driver.maximize_window()
+ driver.implicitly_wait(5)
+ yield driver
+ time.sleep(1) # Para ver el resultado final
+ driver.quit()
