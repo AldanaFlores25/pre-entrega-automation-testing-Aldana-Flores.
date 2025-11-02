@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 import pytest 
 
-from Utils.datos import leer_csv_login
+from utils.datos import leer_csv_login
 from pages.login_page import LoginPage
 
 
