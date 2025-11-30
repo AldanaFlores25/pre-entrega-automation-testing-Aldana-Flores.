@@ -1,39 +1,29 @@
-import pytest
 from selenium.webdriver.common.by import By
 from selenium import webdriver
-import time
+import pytest
 
-def test_navegacion_catalogo(login_in_driver):
+from pages.inventory_page import InventoryPage
+
+@pytest.mark.parametrize("usuario,password",[("standard_user","secret_sauce")])
+def test_inventory(login_in_driver,usuario,password):
     try:
         driver = login_in_driver
+        inventory_page = InventoryPage(driver)
 
-        # Configurar espera implícita de hasta 5 segundos
-        driver.implicitly_wait(3)
+        # Verificar que hay productos
+        assert len(inventory_page.obtener_todos_los_productos()) > 0, "El inventario esta vacio"
 
-        # Verificar que el título de la página de inventario sea correcto
-        assert driver.title == "Swag Labs", "El título de la página no coincide"
+        # Verificar vacio el carrito al inicio
+        assert inventory_page.obtener_conteo_carrito() == 0
 
-        # Verificar que existan productos visibles en la página
-        products = driver.find_elements(By.CLASS_NAME, "inventory_item")
-        assert len(products) > 0, "No hay productos visibles en la página"
+        # Agregar el primer producto
+        inventory_page.agregar_primer_producto()
 
-        # Guardar nombre y precio del primer producto
-        primer_producto = products[0]
-        nombre_producto = primer_producto.find_element(By.CLASS_NAME, "inventory_item_name").text
-        precio_producto = primer_producto.find_element(By.CLASS_NAME, "inventory_item_price").text
-
-        print(f"Primer producto: {nombre_producto} - Precio: {precio_producto}")
-
-        # Validar elementos importantes de la interfaz
-        # Menú de navegación
-        menu = driver.find_element(By.ID, "react-burger-menu-btn")
-        assert menu.is_displayed(), "El menú no está presente en la página"
-
-        # Filtros de ordenamiento
-        filtro = driver.find_element(By.CLASS_NAME, "product_sort_container")
-        assert filtro.is_displayed(), "El filtro de productos no está presente en la página"
-
+        # Verificar el contador del carrito
+        assert inventory_page.obtener_conteo_carrito() == 1
+       
     except Exception as e:
-        print(f"Error en test_navegacion_inventario: {e}")
+        print(f"Error en test_inventory: {e}")
         raise
-   
+    finally:
+        driver.quit()

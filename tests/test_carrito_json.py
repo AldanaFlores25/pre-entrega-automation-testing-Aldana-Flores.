@@ -7,7 +7,7 @@ from pages.cart_page import CartPage
 from utils.lector_json import leer_json_productos
 
 import time
-RUTA_JSON = "datos/productos.json"
+RUTA_JSON = "datos/productos.json" #definir una constante de la ruta de datos
 
 @pytest.mark.parametrize("usuario,password",[("standard_user","secret_sauce")])
 @pytest.mark.parametrize("nombre_producto",leer_json_productos(RUTA_JSON))
@@ -16,7 +16,7 @@ def test_cart_json(login_in_driver,usuario,password,nombre_producto):
         driver = login_in_driver
         inventory_page = InventoryPage(driver)
 
-        # Agregar al carrito el producto
+        # Agregar al carrito el producto por nombre
         inventory_page.agregar_producto_por_nombre(nombre_producto)
 
         # Abrir el carrito

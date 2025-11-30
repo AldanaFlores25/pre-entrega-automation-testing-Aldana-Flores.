@@ -5,6 +5,7 @@ test_files = [
     "tests/test_login.py",
     "tests/test_catalogo.py",
     "tests/test_carrito.py",
+    "tests/test_carrito_json.py"
 ]
 
 # Argumentos para ejecutar las pruebas: archivos + reporte HTML

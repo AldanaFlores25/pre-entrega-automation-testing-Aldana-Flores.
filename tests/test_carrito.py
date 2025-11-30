@@ -1,43 +1,30 @@
-import pytest
 from selenium.webdriver.common.by import By
 from selenium import webdriver
-import time
+import pytest
 
-def test_carrito(login_in_driver):
+from pages.inventory_page import InventoryPage #importamos los archivos que ya creamos definiendo las funciones del catalogo
+from pages.cart_page import CartPage #importamos los archivos que ya creamos para trabajar las funciones del carrito
+
+@pytest.mark.parametrize("usuario,password",[("standard_user","secret_sauce")])
+def test_cart(login_in_driver,usuario,password):
     try:
-        driver = login_in_driver
+        driver = login_in_driver #inicializamos el driver que ya creamos en inventory_page
+        inventory_page = InventoryPage(driver)
 
-        # Configurar espera implícita de hasta 5 segundos
-        driver.implicitly_wait(3)
+        # Agregar al carrito el producto
+        inventory_page.agregar_primer_producto()
 
-        # Encuentra todos los productos
-        products = driver.find_elements(By.CLASS_NAME, "inventory_item")
-        assert len(products) > 0, "No hay productos visibles en la página"
+        # Abrir el carrito
+        inventory_page.abrir_carrito()
 
-        # Tomamos el primer producto
-        primer_producto = products[0]
-
-        # Guardamos nombre y precio del producto
-        nombre_producto = primer_producto.find_element(By.CLASS_NAME, "inventory_item_name").text
-        precio_producto = primer_producto.find_element(By.CLASS_NAME, "inventory_item_price").text
-
-        # Añadir al carrito
-        boton_add = primer_producto.find_element(By.CSS_SELECTOR, "button.btn_inventory")
-        boton_add.click()
-
-        # Verificar que el contador del carrito se incrementó a 1
-        contador_carrito = driver.find_element(By.CLASS_NAME, "shopping_cart_badge").text
-        assert contador_carrito == "1", "El contador del carrito no se actualizó correctamente"
-
-        # Navegar al carrito
-        driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
-
-        # Verificar que el producto aparezca en el carrito
-        carrito_items = driver.find_elements(By.CLASS_NAME, "cart_item")
-        assert len(carrito_items) > 0, "No hay productos en el carrito"
-
+        # Validar el producto
+        cartPage = CartPage(driver)
+        
+        productos_en_carrito = cartPage.obtener_productos_carrito()
+        assert len(productos_en_carrito) == 1
 
     except Exception as e:
-        print(f"Error en test_carrito: {e}")
+        print(f"Error en test_cart: {e}")
         raise
- 
+    finally:
+        driver.quit()

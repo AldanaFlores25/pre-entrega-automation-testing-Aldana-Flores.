@@ -38,7 +38,7 @@ class InventoryPage:
         """
         Espera a que los productos estén visibles en pantalla y luego los devuelve como lista.
         """
-        self.wait.until(
+        self.wait.until( #condicional para esperar hasta que se carguen todos los lementos de la pagina
             EC.visibility_of_all_elements_located(self._INVENTORY_ITEMS)
         )
         productos = self.driver.find_elements(*self._INVENTORY_ITEMS)

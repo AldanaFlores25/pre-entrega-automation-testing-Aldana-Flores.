@@ -13,9 +13,9 @@ fake = Faker()
 
 # Parametrizamos el test con dos combinaciones de datos falsos
 # Cada caso contiene:
-#   usuario → nombre de usuario generado
-#   password → contraseña generada
-#   debe_funcionar → indica si el login debería pasar o fallar
+#   usuario, nombre de usuario generado
+#   password, contraseña generada
+#   debe_funcionar, indica si el login debería pasar o fallar
 @pytest.mark.parametrize("usuario,password,debe_funcionar", [
     # Caso 1: usuario y password válidos pero no existentes en el sistema → debe fallar
     (
@@ -23,7 +23,7 @@ fake = Faker()
         fake.password(length=8, special_chars=True, upper_case=True, lower_case=True, digits=True), #genera password con los requisitos especificos
         False  
     ),
-    # Caso 2: credenciales totalmente aleatorias → también debe fallar
+    # Caso 2: credenciales totalmente aleatorias, también debe fallar
     (
         fake.user_name(),
         fake.password(),
