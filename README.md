@@ -1,67 +1,135 @@
-# Proyecto de Automatización con Selenium - Saucedemo
+# 🚀 Proyecto  Automation de Talento Tech
 
-## Propósito del Proyecto
-Este proyecto fue creado con fines educativos para practicar **automatización de pruebas funcionales** con Python y Selenium.  
-Los casos de prueba se ejecutan sobre la página de demostración **[SauceDemo](https://www.saucedemo.com/)**, un sitio diseñado para probar flujos típicos de una tienda online (login, inventario, carrito, checkout, etc.).
+## 🎯 Propósito del proyecto
+Este proyecto tiene como objetivo **automatizar pruebas de UI y API** para el sitio **SauceDemo**, aplicando buenas prácticas como:
 
-Los objetivos principales son:
-- Validar el funcionamiento del **login**.
-- Verificar la **navegación y elementos del inventario**.
-- Probar la **funcionalidad del carrito de compras**.
-- Reutilizar funciones y aplicar buenas prácticas de automatización.
+- Page Object Model (POM)
+- Manejo de datos externos (CSV / JSON)
+- Generación automática de reportes HTML
+- Logging centralizado
+- Captura automática de pantallas ante fallos
 
----
-
-##  Tecnologías Utilizadas
-
-|      Tecnología        |     Descripción           |
-|------------------------|---------------------------|
-| **Python 3.13+** | Lenguaje principal del proyecto |
-| **Selenium 4.36+** | Librería para automatizar navegadores |
-| **WebDriver** | Controlador del navegador (Edge o Chrome) |
-| **EdgeDriver / ChromeDriver** | Permite a Selenium comunicarse con el navegador |
-| **Pytest**         | Framework recomendado para ejecutar los tests de forma organizada |
+> ✔️ La estructura está diseñada para mantener orden, escalabilidad y facilidad de mantenimiento.
 
 ---
 
-## Instalación de Dependencias
+## 🛠️ Tecnologías utilizadas
+- **Python 3.x**
+- **Pytest** → ejecución de pruebas
+- **Selenium WebDriver** → automatización UI
+- **Requests** → pruebas de API
+- **Faker** → generación de datos dinámicos
+- **Logging**
+- **CSV / JSON** para datos externos
 
-1. **Clonar el proyecto (o descargar los archivos)**  
-   ```bash
-   git clone https://github.com/AldanaFlores25/PreEntrega-FloresAldana.git
-   cd selenium-PreEntrega-FloresAldana
+---
 
-2. **instalar python (si no lo tenes)**
-    desde: https://www.python.org/downloads/
- 
-3. **instalar selenium**
-    desde la consola
-    ## comando: pip install selenium
+## 📊 Reportes y Logs
 
-4. **instalar pytest**
-    desde la consola
-    ## comando: pip install pytest
+Durante la ejecución, el proyecto genera **tres tipos de resultados principales**:
 
-5. **instalar webdriver**
-    desde consola:
-    ## comando: pip install webdriver-manager
+### 📄 Reporte HTML
+- Se genera automáticamente como:  
+  ```reporte.html```
+- Ubicación: **carpeta raíz del proyecto**
+- Incluye:
+  - Tests ejecutados  
+  - Estado (OK / FAIL)  
+  - Duración  
+  - Capturas de pantalla  
 
+---
 
-## Ejecucion de los tests
+### 📁 Logs de ejecución
 
-1. *Abrir la terminal en la carpeta del proyecto*
+Tambien se genera un log con informacion detallada de toda la ejecución de las pruebas en la siguiente ubicacion: ```logs/suite.log```
 
-2. *Ejecutar todos los tests con el comando:*
-  **pytest**
+---
 
-3. *para ejecutar un test especifico:*
-  **pytest tests/test_login.py**
+### 🖼️ Capturas de pantalla
+- Se generan **solo cuando una prueba falla**.  
+- Permiten revisar visualmente el estado del navegador al momento del fallo.
 
+---
 
-## BUENAS PRACTICAS
+## ▶️ Ejecutar todas las pruebas
 
- *Mantener los selectores organizados y actualizados.*
+Ejecuta la suite completa con:
 
- *Reutilizar funciones con Page Objects o helpers.*
+```bash
+python -m run_test
+```
+Esto lanzará todos los tests y generará automáticamente el reporte HTML, el log y las capturas.
 
- *Documentar cada test con su propósito y resultado esperado.*
+## 📘 ¿Cómo interpretar los reportes?
+
+Al ejecutar run_test.py, se genera un archivo HTML con:
+
+✔️ Lista completa de pruebas
+
+✔️ Estado de cada prueba
+
+✔️ Duración
+
+✔️ Screenshots en pruebas fallidas
+
+Este reporte permite analizar rápidamente resultados y detectar errores.
+
+## 🧪 Pruebas incluidas
+🔐 Login
+
+Login exitoso
+
+Login fallido
+
+Login con datos generados con Faker
+
+📦 Inventario
+
+Validación de productos en pantalla
+
+Comportamiento al agregar items
+
+🛒 Carrito
+
+Agregar y eliminar productos
+
+Validaciones de estado
+
+🌐 API (Reqres)
+
+GET users
+
+POST create user
+
+DELETE user
+
+Validación de códigos HTTP
+
+Validación de estructura JSON
+
+## 📂 Manejo de datos de prueba
+
+En la carpeta datos/ se incluyen archivos externos como:
+
+data_login.csv → usuarios válidos e inválidos
+
+productos.json → datos de productos para la UI
+
+Esto permite separar la lógica del código de los datos, facilitando configuraciones y escalabilidad.
+
+## 🧾 Conclusión
+
+Este proyecto ofrece una arquitectura limpia, modular y escalable para automatizar pruebas con Python y Pytest.
+
+Incluye:
+
+Ejecución centralizada con run_test.py
+
+Reporte HTML automático
+
+Registro completo en logs
+
+Buena organización de carpetas y datos
+
+Permite agregar nuevos tests de forma simple sin alterar el núcleo del framework, garantizando buenas prácticas y extensibilidad en el tiempo.

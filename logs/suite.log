@@ -1,0 +1,454 @@
+2025-12-02 20:57:16 INFO TalentoTech: Relizando la solitud GET a https://reqres.in/api/users 
+2025-12-02 20:57:17 INFO TalentoTech: Status code: 401
+2025-12-02 23:40:00 INFO TalentoTech: Relizando la solitud GET a https://reqres.in/api/users 
+2025-12-02 23:40:01 INFO TalentoTech: Status code: 403
+2025-12-02 23:52:15 INFO TalentoTech: Realizando la solicitud GET a https://reqres.in/api/users/2
+2025-12-02 23:52:16 INFO TalentoTech: Status code: 403
+2025-12-02 23:58:56 INFO TalentoTech: Realizando la solicitud GET a https://reqres.in/api/users/2
+2025-12-02 23:58:56 INFO TalentoTech: Status code: 403
+2025-12-03 00:16:39 INFO TalentoTech: Realizando GET /users/2
+2025-12-03 00:16:40 INFO TalentoTech: Realizando POST /users
+2025-12-03 00:16:41 INFO TalentoTech: Realizando DELETE /users/2
+2025-12-03 00:25:24 INFO Automation_TalentoTech: Realizando GET /users/2
+2025-12-03 00:25:25 INFO Automation_TalentoTech: Status: 200
+2025-12-03 00:25:25 INFO Automation_TalentoTech: Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-03 00:25:25 INFO Automation_TalentoTech: Realizando POST /users
+2025-12-03 00:25:26 INFO Automation_TalentoTech: Status: 201
+2025-12-03 00:25:26 INFO Automation_TalentoTech: Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-03 00:25:26 INFO Automation_TalentoTech: Realizando DELETE /users/2
+2025-12-03 00:25:26 INFO Automation_TalentoTech: Status: 200
+2025-12-03 00:43:52 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-03 00:43:52 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-03 00:43:53 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-03 00:43:53 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-03 00:43:53 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-03 00:43:53 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-03 00:43:53 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-03 00:43:53 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-03 00:43:53 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-03 00:43:53 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-03 00:43:54 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-03 00:43:54 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-03 00:43:54 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-03 00:43:54 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-03 00:43:54 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-03 00:43:54 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-03 00:43:54 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-03 00:43:54 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-03 00:43:54 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-03 00:43:54 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-03 09:21:22 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-03 09:21:22 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-03 09:21:22 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-03 09:21:22 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-03 09:21:22 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-03 09:21:22 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-03 09:21:22 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-03 09:21:22 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-03 09:21:22 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-03 09:21:22 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-03 09:21:23 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-03 09:21:23 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-03 09:21:23 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-03 09:21:23 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-03 09:21:23 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-03 09:21:23 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-03 09:21:23 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-03 09:21:24 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-03 09:21:24 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-03 09:21:24 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-03 09:25:36 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-03 09:25:36 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-03 09:25:37 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-03 09:25:37 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-03 09:25:37 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-03 09:25:37 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-03 09:25:37 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-03 09:25:37 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-03 09:25:37 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-03 09:25:37 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-03 09:25:38 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-03 09:25:38 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-03 09:25:38 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-03 09:25:38 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-03 09:25:38 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-03 09:25:38 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-03 09:25:38 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-03 09:25:38 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-03 09:25:38 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-03 09:25:38 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-07 12:01:46 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-07 12:01:46 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-07 12:01:47 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-07 12:01:47 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-07 12:01:47 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-07 12:01:47 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-07 12:01:47 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-07 12:01:47 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-07 12:01:47 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-07 12:01:47 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-07 12:01:48 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-07 12:01:48 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-07 12:01:48 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-07 12:01:48 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-07 12:01:48 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-07 12:01:48 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-07 12:01:48 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-07 12:01:48 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-07 12:01:48 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-07 12:01:48 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-07 12:10:01 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-07 12:10:01 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-07 12:10:02 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-07 12:10:02 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-07 12:10:02 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-07 12:10:02 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-07 12:10:02 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-07 12:10:02 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-07 12:10:02 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-07 12:10:02 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-07 12:10:02 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-07 12:10:02 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-07 12:10:02 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-07 12:10:02 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-07 12:10:02 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-07 12:10:02 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-07 12:10:02 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-07 12:10:03 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-07 12:10:03 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-07 12:10:03 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-07 12:25:23 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-07 12:25:23 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-07 12:25:24 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-07 12:25:24 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-07 12:25:24 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-07 12:25:24 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-07 12:25:24 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-07 12:25:24 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-07 12:25:24 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-07 12:25:24 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-07 12:25:25 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-07 12:25:25 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-07 12:25:25 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-07 12:25:25 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-07 12:25:25 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-07 12:25:25 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-07 12:25:25 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-07 12:25:25 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-07 12:25:25 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-07 12:25:25 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-07 12:25:28 INFO Automation_TalentoTech: INICIO TEST: flujo de checkout
+2025-12-07 12:25:28 INFO Automation_TalentoTech: Click en 'Checkout' desde el carrito
+2025-12-07 13:48:02 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-07 13:48:02 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-07 13:48:02 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-07 13:48:02 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-07 13:48:02 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-07 13:48:03 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-07 13:48:03 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-08 00:10:01 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-08 00:10:01 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-08 00:10:02 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-08 00:10:02 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-08 00:10:02 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-08 00:10:02 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-08 00:10:02 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:10:02 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-08 00:10:02 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-08 00:10:02 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-08 00:10:02 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-08 00:10:02 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-08 00:10:02 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-08 00:10:02 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-08 00:10:02 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:10:02 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-08 00:10:02 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-08 00:10:03 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-08 00:10:03 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-08 00:10:03 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:10:05 INFO Automation_TalentoTech: INICIO TEST: flujo de checkout
+2025-12-08 00:10:05 INFO Automation_TalentoTech: Navegando al carrito…
+2025-12-08 00:10:06 INFO Automation_TalentoTech: Click en 'Checkout' desde el carrito
+2025-12-08 00:10:06 INFO Automation_TalentoTech: Datos generados: Nombre=Azucena, Apellido=Gibert, CP=19960
+2025-12-08 00:10:06 INFO Automation_TalentoTech: Completando formulario de checkout: Azucena Gibert 19960
+2025-12-08 00:10:06 INFO Automation_TalentoTech: Click en 'Continue' para ir al resumen
+2025-12-08 00:10:06 INFO Automation_TalentoTech: Subtotal: Item total: $0
+2025-12-08 00:10:07 INFO Automation_TalentoTech: Tax: Tax: $0.00
+2025-12-08 00:10:07 INFO Automation_TalentoTech: Total: Total: $0.00
+2025-12-08 00:10:07 INFO Automation_TalentoTech: Resumen obtenido => Subtotal: Item total: $0 | Impuesto: Tax: $0.00 | Total: Total: $0.00
+2025-12-08 00:10:07 INFO Automation_TalentoTech: Click en 'Finish' para completar la orden
+2025-12-08 00:10:07 INFO Automation_TalentoTech: Pantalla de finalización detectada: Thank you for your order!
+2025-12-08 00:10:07 INFO Automation_TalentoTech: FIN TEST: checkout
+2025-12-08 00:13:43 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-08 00:13:43 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-08 00:13:43 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-08 00:13:43 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-08 00:13:43 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-08 00:13:43 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-08 00:13:43 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:13:43 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-08 00:13:43 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-08 00:13:43 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-08 00:13:44 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-08 00:13:44 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-08 00:13:44 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-08 00:13:44 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-08 00:13:44 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:13:44 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-08 00:13:44 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-08 00:13:44 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-08 00:13:44 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-08 00:13:44 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:13:47 INFO Automation_TalentoTech: INICIO TEST: flujo de checkout
+2025-12-08 00:13:47 INFO Automation_TalentoTech: Navegando al carrito…
+2025-12-08 00:13:47 INFO Automation_TalentoTech: Click en 'Checkout' desde el carrito
+2025-12-08 00:13:47 INFO Automation_TalentoTech: Datos generados: Nombre=Quique, Apellido=Casas, CP=08819
+2025-12-08 00:13:47 INFO Automation_TalentoTech: Completando formulario de checkout: Quique Casas 08819
+2025-12-08 00:13:48 INFO Automation_TalentoTech: Click en 'Continue' para ir al resumen
+2025-12-08 00:13:48 INFO Automation_TalentoTech: Subtotal: Item total: $0
+2025-12-08 00:13:48 INFO Automation_TalentoTech: Tax: Tax: $0.00
+2025-12-08 00:13:48 INFO Automation_TalentoTech: Total: Total: $0.00
+2025-12-08 00:13:48 INFO Automation_TalentoTech: Resumen obtenido => Subtotal: Item total: $0 | Impuesto: Tax: $0.00 | Total: Total: $0.00
+2025-12-08 00:13:48 INFO Automation_TalentoTech: Click en 'Finish' para completar la orden
+2025-12-08 00:13:48 INFO Automation_TalentoTech: Pantalla de finalización detectada: Thank you for your order!
+2025-12-08 00:13:48 INFO Automation_TalentoTech: FIN TEST: checkout
+2025-12-08 00:19:25 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-08 00:19:25 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-08 00:19:26 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-08 00:19:26 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-08 00:19:26 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-08 00:19:26 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-08 00:19:26 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:19:26 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-08 00:19:26 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-08 00:19:26 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-08 00:19:27 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-08 00:19:27 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-08 00:19:27 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-08 00:19:27 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-08 00:19:27 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:19:27 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-08 00:19:27 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-08 00:19:29 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-08 00:19:29 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-08 00:19:29 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:19:32 INFO Automation_TalentoTech: INICIO TEST: flujo de checkout
+2025-12-08 00:19:32 INFO Automation_TalentoTech: Navegando al carrito…
+2025-12-08 00:19:33 INFO Automation_TalentoTech: Click en 'Checkout' desde el carrito
+2025-12-08 00:19:33 INFO Automation_TalentoTech: Datos generados: Nombre=Maxi, Apellido=Márquez, CP=15573
+2025-12-08 00:19:33 INFO Automation_TalentoTech: Completando formulario de checkout: Maxi Márquez 15573
+2025-12-08 00:19:34 INFO Automation_TalentoTech: Click en 'Continue' para ir al resumen
+2025-12-08 00:19:34 INFO Automation_TalentoTech: Subtotal: Item total: $0
+2025-12-08 00:19:34 INFO Automation_TalentoTech: Tax: Tax: $0.00
+2025-12-08 00:19:34 INFO Automation_TalentoTech: Total: Total: $0.00
+2025-12-08 00:19:34 INFO Automation_TalentoTech: Resumen obtenido => Subtotal: Item total: $0 | Impuesto: Tax: $0.00 | Total: Total: $0.00
+2025-12-08 00:19:34 INFO Automation_TalentoTech: Click en 'Finish' para completar la orden
+2025-12-08 00:19:35 INFO Automation_TalentoTech: Pantalla de finalización detectada: Thank you for your order!
+2025-12-08 00:19:35 INFO Automation_TalentoTech: FIN TEST: checkout
+2025-12-08 00:24:58 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-08 00:24:58 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-08 00:24:59 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-08 00:24:59 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-08 00:24:59 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-08 00:24:59 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-08 00:24:59 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:24:59 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-08 00:24:59 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-08 00:24:59 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-08 00:24:59 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-08 00:24:59 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-08 00:24:59 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-08 00:24:59 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-08 00:24:59 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:24:59 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-08 00:24:59 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-08 00:25:00 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-08 00:25:00 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-08 00:25:00 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:25:02 INFO Automation_TalentoTech: INICIO TEST: flujo de checkout
+2025-12-08 00:25:02 INFO Automation_TalentoTech: Navegando al carrito…
+2025-12-08 00:25:03 INFO Automation_TalentoTech: Click en 'Checkout' desde el carrito
+2025-12-08 00:25:03 INFO Automation_TalentoTech: Datos generados: Nombre=Perlita, Apellido=Carrillo, CP=37921
+2025-12-08 00:25:03 INFO Automation_TalentoTech: Completando formulario de checkout: Perlita Carrillo 37921
+2025-12-08 00:25:03 INFO Automation_TalentoTech: Click en 'Continue' para ir al resumen
+2025-12-08 00:25:04 INFO Automation_TalentoTech: Subtotal: Item total: $0
+2025-12-08 00:25:04 INFO Automation_TalentoTech: Tax: Tax: $0.00
+2025-12-08 00:25:04 INFO Automation_TalentoTech: Total: Total: $0.00
+2025-12-08 00:25:04 INFO Automation_TalentoTech: Resumen obtenido => Subtotal: Item total: $0 | Impuesto: Tax: $0.00 | Total: Total: $0.00
+2025-12-08 00:25:04 INFO Automation_TalentoTech: Click en 'Finish' para completar la orden
+2025-12-08 00:25:04 INFO Automation_TalentoTech: Pantalla de finalización detectada: Thank you for your order!
+2025-12-08 00:25:04 INFO Automation_TalentoTech: FIN TEST: checkout
+2025-12-08 00:28:26 INFO Automation_TalentoTech: INICIO TEST: flujo de checkout
+2025-12-08 00:28:26 INFO Automation_TalentoTech: Navegando al carrito…
+2025-12-08 00:28:26 INFO Automation_TalentoTech: Click en 'Checkout' desde el carrito
+2025-12-08 00:28:27 INFO Automation_TalentoTech: Datos generados: Nombre=Yago, Apellido=Tena, CP=16629
+2025-12-08 00:28:27 INFO Automation_TalentoTech: Completando formulario de checkout: Yago Tena 16629
+2025-12-08 00:28:27 INFO Automation_TalentoTech: Click en 'Continue' para ir al resumen
+2025-12-08 00:28:28 INFO Automation_TalentoTech: Subtotal: Item total: $0
+2025-12-08 00:28:28 INFO Automation_TalentoTech: Tax: Tax: $0.00
+2025-12-08 00:28:28 INFO Automation_TalentoTech: Total: Total: $0.00
+2025-12-08 00:28:28 INFO Automation_TalentoTech: Resumen obtenido => Subtotal: Item total: $0 | Impuesto: Tax: $0.00 | Total: Total: $0.00
+2025-12-08 00:28:28 INFO Automation_TalentoTech: Click en 'Finish' para completar la orden
+2025-12-08 00:28:28 INFO Automation_TalentoTech: Pantalla de finalización detectada: Thank you for your order!
+2025-12-08 00:28:28 INFO Automation_TalentoTech: FIN TEST: checkout
+2025-12-08 00:28:30 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-08 00:28:30 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-08 00:28:32 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-08 00:28:32 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-08 00:28:32 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-08 00:28:32 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-08 00:28:32 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:28:32 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-08 00:28:32 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-08 00:28:32 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-08 00:28:33 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-08 00:28:33 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-08 00:28:33 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-08 00:28:33 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-08 00:28:33 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:28:33 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-08 00:28:33 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-08 00:28:34 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-08 00:28:34 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-08 00:28:34 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:28:34 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-08 00:28:34 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-08 00:28:36 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-08 00:28:36 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-08 00:28:36 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-08 00:28:36 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-08 00:28:36 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:28:36 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-08 00:28:36 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-08 00:28:36 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-08 00:28:37 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-08 00:28:37 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-08 00:28:37 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-08 00:28:37 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-08 00:28:37 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:28:37 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-08 00:28:37 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-08 00:28:38 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-08 00:28:38 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-08 00:28:38 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:30:13 INFO Automation_TalentoTech: INICIO TEST: flujo de checkout
+2025-12-08 00:30:13 INFO Automation_TalentoTech: Navegando al carrito…
+2025-12-08 00:30:13 INFO Automation_TalentoTech: Click en 'Checkout' desde el carrito
+2025-12-08 00:30:13 INFO Automation_TalentoTech: Datos generados: Nombre=César, Apellido=Suárez, CP=10969
+2025-12-08 00:30:13 INFO Automation_TalentoTech: Completando formulario de checkout: César Suárez 10969
+2025-12-08 00:30:14 INFO Automation_TalentoTech: Click en 'Continue' para ir al resumen
+2025-12-08 00:30:14 INFO Automation_TalentoTech: Subtotal: Item total: $0
+2025-12-08 00:30:14 INFO Automation_TalentoTech: Tax: Tax: $0.00
+2025-12-08 00:30:14 INFO Automation_TalentoTech: Total: Total: $0.00
+2025-12-08 00:30:14 INFO Automation_TalentoTech: Resumen obtenido => Subtotal: Item total: $0 | Impuesto: Tax: $0.00 | Total: Total: $0.00
+2025-12-08 00:30:14 INFO Automation_TalentoTech: Click en 'Finish' para completar la orden
+2025-12-08 00:30:14 INFO Automation_TalentoTech: Pantalla de finalización detectada: Thank you for your order!
+2025-12-08 00:30:14 INFO Automation_TalentoTech: FIN TEST: checkout
+2025-12-08 00:33:36 INFO Automation_TalentoTech: INICIO TEST: flujo de checkout
+2025-12-08 00:33:36 INFO Automation_TalentoTech: Navegando al carrito…
+2025-12-08 00:33:37 INFO Automation_TalentoTech: Click en 'Checkout' desde el carrito
+2025-12-08 00:33:37 INFO Automation_TalentoTech: Datos generados: Nombre=Teodosio, Apellido=Bou, CP=28805
+2025-12-08 00:33:37 INFO Automation_TalentoTech: Completando formulario de checkout: Teodosio Bou 28805
+2025-12-08 00:33:38 INFO Automation_TalentoTech: Click en 'Continue' para ir al resumen
+2025-12-08 00:33:38 INFO Automation_TalentoTech: Subtotal: Item total: $0
+2025-12-08 00:33:38 INFO Automation_TalentoTech: Tax: Tax: $0.00
+2025-12-08 00:33:38 INFO Automation_TalentoTech: Total: Total: $0.00
+2025-12-08 00:33:38 INFO Automation_TalentoTech: Resumen obtenido => Subtotal: Item total: $0 | Impuesto: Tax: $0.00 | Total: Total: $0.00
+2025-12-08 00:33:38 INFO Automation_TalentoTech: Click en 'Finish' para completar la orden
+2025-12-08 00:33:39 INFO Automation_TalentoTech: Pantalla de finalización detectada: Thank you for your order!
+2025-12-08 00:33:39 INFO Automation_TalentoTech: FIN TEST: checkout
+2025-12-08 00:33:41 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-08 00:33:41 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-08 00:33:42 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-08 00:33:42 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-08 00:33:42 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-08 00:33:42 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-08 00:33:42 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:33:42 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-08 00:33:42 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-08 00:33:42 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-08 00:33:44 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-08 00:33:44 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-08 00:33:44 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-08 00:33:44 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-08 00:33:44 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:33:44 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-08 00:33:44 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-08 00:33:45 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-08 00:33:45 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-08 00:33:45 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:37:33 INFO Automation_TalentoTech: INICIO TEST: flujo de checkout
+2025-12-08 00:37:33 INFO Automation_TalentoTech: Navegando al carrito…
+2025-12-08 00:37:33 INFO Automation_TalentoTech: Click en 'Checkout' desde el carrito
+2025-12-08 00:37:33 INFO Automation_TalentoTech: Datos generados: Nombre=Cecilia, Apellido=Ariza, CP=19822
+2025-12-08 00:37:33 INFO Automation_TalentoTech: Completando formulario de checkout: Cecilia Ariza 19822
+2025-12-08 00:37:34 INFO Automation_TalentoTech: Click en 'Continue' para ir al resumen
+2025-12-08 00:37:35 INFO Automation_TalentoTech: Subtotal: Item total: $0
+2025-12-08 00:37:35 INFO Automation_TalentoTech: Tax: Tax: $0.00
+2025-12-08 00:37:35 INFO Automation_TalentoTech: Total: Total: $0.00
+2025-12-08 00:37:35 INFO Automation_TalentoTech: Resumen obtenido => Subtotal: Item total: $0 | Impuesto: Tax: $0.00 | Total: Total: $0.00
+2025-12-08 00:37:35 INFO Automation_TalentoTech: Click en 'Finish' para completar la orden
+2025-12-08 00:37:35 INFO Automation_TalentoTech: Pantalla de finalización detectada: Thank you for your order!
+2025-12-08 00:37:35 INFO Automation_TalentoTech: FIN TEST: checkout
+2025-12-08 00:37:37 INFO Automation_TalentoTech: ===== INICIO TEST: GET USER =====
+2025-12-08 00:37:37 INFO Automation_TalentoTech: Paso 1: Enviando GET a /users/2
+2025-12-08 00:37:38 INFO Automation_TalentoTech: Resultado real - Status code recibido: 200
+2025-12-08 00:37:38 INFO Automation_TalentoTech: Resultado real - Body: {'id': 2, 'name': 'Ervin Howell', 'username': 'Antonette', 'email': 'Shanna@melissa.tv', 'address': {'street': 'Victor Plains', 'suite': 'Suite 879', 'city': 'Wisokyburgh', 'zipcode': '90566-7771', 'geo': {'lat': '-43.9509', 'lng': '-34.4618'}}, 'phone': '010-692-6593 x09125', 'website': 'anastasia.net', 'company': {'name': 'Deckow-Crist', 'catchPhrase': 'Proactive didactic contingency', 'bs': 'synergize scalable supply-chains'}}
+2025-12-08 00:37:38 INFO Automation_TalentoTech: Validación: Se esperaba status 200
+2025-12-08 00:37:38 INFO Automation_TalentoTech: Validación: Se esperaba ID = 2, recibido = 2
+2025-12-08 00:37:38 INFO Automation_TalentoTech: TEST GET USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:37:38 INFO Automation_TalentoTech: ===== INICIO TEST: CREATE USER =====
+2025-12-08 00:37:38 INFO Automation_TalentoTech: Paso 1: Enviando POST a /users
+2025-12-08 00:37:38 INFO Automation_TalentoTech: Payload enviado: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com'}
+2025-12-08 00:37:39 INFO Automation_TalentoTech: Resultado real - Status code: 201
+2025-12-08 00:37:39 INFO Automation_TalentoTech: Resultado real - Body: {'name': 'Jose', 'username': 'Profesor', 'email': 'jose@example.com', 'id': 11}
+2025-12-08 00:37:39 INFO Automation_TalentoTech: Validación: Se esperaba status 201
+2025-12-08 00:37:39 INFO Automation_TalentoTech: Validación: Se esperaba que el response incluya un 'id' generado
+2025-12-08 00:37:39 INFO Automation_TalentoTech:  TEST CREATE USER PASÓ EXITOSAMENTE
+
+2025-12-08 00:37:39 INFO Automation_TalentoTech: ===== INICIO TEST: DELETE USER =====
+2025-12-08 00:37:39 INFO Automation_TalentoTech: Paso 1: Enviando DELETE a /users/2
+2025-12-08 00:37:40 INFO Automation_TalentoTech: Resultado real - Status code: 200
+2025-12-08 00:37:40 INFO Automation_TalentoTech: Validación: Se esperaba status [200, 204]
+2025-12-08 00:37:40 INFO Automation_TalentoTech:  TEST DELETE USER PASÓ EXITOSAMENTE
+

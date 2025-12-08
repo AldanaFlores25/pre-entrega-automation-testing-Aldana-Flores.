@@ -16,7 +16,7 @@ class CartPage:
     def obtener_productos_carrito(self):
         # Espera a que todos los elementos del carrito estén visibles en pantalla
         # Devuelve una lista de WebElements que representan cada producto en el carrito
-        productos = self.wait.until(EC.visibility_of_all_elements_located(*self._CART_ITEMS))
+        productos = self.wait.until(EC.visibility_of_all_elements_located(self._CART_ITEMS))
         return productos
     
     def obtener_nombre_producto_carrito(self):
