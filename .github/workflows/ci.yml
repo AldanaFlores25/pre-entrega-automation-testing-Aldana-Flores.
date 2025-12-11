@@ -1,0 +1,58 @@
+name: CI Proyecto Automatizacion   # Nombre del workflow que aparecerá en GitHub Actions
+
+# Eventos que disparan este workflow:
+on:
+  push:
+    branches: [main,develop]       # Ejecutar CI en cada push a las ramas main y develop
+  pull_request:
+    branches: [main,develop]       # Ejecutar CI en cada PR hacia main o develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest         # El job correrá en un runner Linux Ubuntu más reciente
+
+    env:
+      PYTHON_VERSION: '3.12'       # Versión de Python utilizada
+      PIP_CACHE: ~/.cache/pip      # Ruta donde se almacenará la cache de pip
+
+    steps:
+      # 1️ Checkout: descarga el repositorio en el runner
+      - name: Checkout codigo
+        uses: actions/checkout@v4
+      
+      # 2️ Cache: almacena dependencias pip para acelerar futuros workflows
+      - name: Cache dependencia
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.PIP_CACHE }}                  # Carpeta de cache
+          key: ${{ runner.os }}-pip-${{ hashFiles('**requirements.txt') }}  # Se actualiza si cambia requirements.txt
+
+      # 3️ Configurar Python en el runner
+      - name: Instalar python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}   # Versión definida arriba
+
+      # 4️ Instalar dependencias del proyecto
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      # 5️ Ejecutar los tests automatizados
+      - name: Run test
+        run: python3 run_tests.py   # Corre tu script principal de pruebas
+
+      # 6️ Subir artefactos generados (reporte HTML, logs, screenshots, etc.)
+
+      #  Reporte HTML de la ejecución
+      - name: Subir HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-report           # Nombre del archivo visible en GitHub
+          path: reports/              # Carpeta donde dejás tus reportes
+
+      #  Logs completos de la suite
+      - name: Subir Suite logs
+        uses: actions/upload-artifact@v4 
+        with:
+          name: suite-log             # Nombre del artefacto
+          path: logs/                 # Carpeta que contiene los logs
