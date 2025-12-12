@@ -41,6 +41,11 @@ jobs:
       - name: Run test
         run: python3 run_tests.py   # Corre tu script principal de pruebas
 
+      # 🔧 Crear carpetas vacías antes de subir artefactos
+      - name: Crear carpetas vacías
+        run: mkdir -p logs reports
+        
+
       # 6️ Subir artefactos generados (reporte HTML, logs, screenshots, etc.)
 
       #  Reporte HTML de la ejecución
