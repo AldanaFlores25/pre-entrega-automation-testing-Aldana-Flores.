@@ -49,6 +49,7 @@ jobs:
         with:
           name: html-report           # Nombre del archivo visible en GitHub
           path: reports/              # Carpeta donde dejás tus reportes
+          if-no-files-found: warn     # ← LÍNEA AGREGADA
 
       #  Logs completos de la suite
       - name: Subir Suite logs
@@ -56,3 +57,4 @@ jobs:
         with:
           name: suite-log             # Nombre del artefacto
           path: logs/                 # Carpeta que contiene los logs
+          if-no-files-found: warn     # ← LÍNEA AGREGADA
