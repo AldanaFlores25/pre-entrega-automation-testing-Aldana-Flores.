@@ -1,24 +1,32 @@
+
 from behave import given, when, then
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
-from pages.cart_page import CartPage
 
-@given("que estoy logueada")
-def step_login(context):
+@given('que estoy logueado como "{usuario}" con contraseña "{password}"')
+def step_login_background(context, usuario, password):
+    """Realiza login automático para el Background."""
     context.login = LoginPage(context.driver)
     context.login.abrir_pagina()
-    context.login.login_completo("standard_user", "secret_sauce")
+    context.login.login_completo(usuario, password)
     context.inventory = InventoryPage(context.driver)
 
-@when("agrego el primer producto")
-def step_add_first(context):
-    context.inventory.agregar_primer_producto()
+@when('agrego el producto "{nombre}" al carrito')
+def step_add_product(context, nombre):
+    """Agrega un único producto por nombre."""
+    context.inventory.agregar_producto_por_nombre(nombre)
 
-@when("abro el carrito")
-def step_open_cart(context):
-    context.inventory.abrir_carrito()
-    context.cart = CartPage(context.driver)
+@when('agrego los siguientes productos al carrito:')
+def step_add_multiple_products(context):
+    """Agrega múltiples productos listados en la tabla."""
+    for row in context.table:
+        nombre_producto = row[0]
+        context.inventory.agregar_producto_por_nombre(nombre_producto)
 
-@then("debería ver 1 producto en el carrito")
-def step_check_cart(context):
-    assert len(context.cart.obtener_productos_carrito()) == 1
+@then('el contador del carrito debería mostrar "{cantidad}"')
+def step_verify_cart_counter(context, cantidad):
+    """Verifica que el contador del carrito sea igual al esperado."""
+    contador = context.inventory.obtener_conteo_carrito()
+    assert str(contador) == cantidad, \
+        f"Se esperaba {cantidad} pero el carrito muestra {contador}"
+

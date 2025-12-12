@@ -1,25 +1,30 @@
-# language: es
+@ui
 Feature: Manejo del inventario
-  Como usuario logueado en SauceDemo
-  Quiero ver y agregar productos al carrito
-  Para continuar la compra
+Validar que los productos del inventario se muestren correctamente
+y que puedan agregarse al carrito según su posición o nombre.
 
-  Background:
-    Given el usuario ha iniciado sesión correctamente
+Background:
+Given que estoy logueado como "standard_user" con contraseña "secret_sauce"
 
-  Scenario: Ver todos los productos disponibles
-    When obtengo la lista de productos
-    Then debo ver al menos un producto visible
+@ui @regression
+Scenario: Ver todos los productos disponibles
+When obtengo la lista de productos del inventario
+Then debería ver al menos un producto visible
 
-  Scenario: Agregar el primer producto del inventario
-    When agrego el primer producto del inventario
-    Then el carrito debe mostrar 1 producto
+@ui @regression
+Scenario: Agregar el primer producto del inventario
+When agrego el primer producto del inventario
+Then el contador del carrito debería mostrar "1"
 
-  Scenario Outline: Agregar un producto por nombre
-    When agrego el producto "<nombre>"
-    Then el carrito debe mostrar 1 producto
+@ui @regression
+Scenario Outline: Agregar un producto por nombre
+When agrego el producto "<nombre>" al carrito
+Then el contador del carrito debería mostrar "1"
 
-    Examples:
-      | nombre                |
-      | Sauce Labs Backpack  |
-      | Sauce Labs Bike Light |
+```
+Examples:
+  | nombre                  |
+  | Sauce Labs Backpack     |
+  | Sauce Labs Bike Light   |
+  | Sauce Labs Bolt T-Shirt |
+```
