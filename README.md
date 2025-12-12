@@ -57,7 +57,7 @@ Tambien se genera un log con informacion detallada de toda la ejecución de las 
 Ejecuta la suite completa con:
 
 ```bash
-python -m run_test
+python -m run_tests
 ```
 Esto lanzará todos los tests y generará automáticamente el reporte HTML, el log y las capturas.
 
