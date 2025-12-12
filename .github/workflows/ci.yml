@@ -51,6 +51,9 @@ jobs:
           path: reports/              # Carpeta donde dejás tus reportes
 
       #  Logs completos de la suite
+      - name: Crear carpeta logs
+        run: mkdir -p logs
+
       - name: Subir Suite logs
         uses: actions/upload-artifact@v4 
         with:
