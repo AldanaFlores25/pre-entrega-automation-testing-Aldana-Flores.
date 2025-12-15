@@ -135,4 +135,4 @@ Buena organización de carpetas y datos
 
 Permite agregar nuevos tests de forma simple sin alterar el núcleo del framework, garantizando buenas prácticas y extensibilidad en el tiempo.
 
-Permite correr todas las pruebas cada vez que se hace una actualización y asi detectar cualquiero posible error en el menor tiempo posible
+Permite correr todas las pruebas cada vez que se hace una actualización y asi poder detectar cualquier posible error en el menor tiempo posible
