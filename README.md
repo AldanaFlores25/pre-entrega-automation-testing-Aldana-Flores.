@@ -17,7 +17,7 @@ Este proyecto tiene como objetivo **automatizar pruebas de UI y API** para el si
 - **Python 3.x**
 - **Pytest** → ejecución de pruebas
 - **Selenium WebDriver** → automatización UI
-- **Requests** → pruebas de API
+- **jsonplaceholder** → pruebas de API
 - **Faker** → generación de datos dinámicos
 - **Logging**
 - **CSV / JSON** para datos externos
@@ -96,7 +96,7 @@ Agregar y eliminar productos
 
 Validaciones de estado
 
-🌐 API (Reqres)
+🌐 API (JsonPlaceHolder)
 
 GET users
 
