@@ -41,13 +41,18 @@ jobs:
       - name: Agregar carpeta del proyecto al PYTHONPATH
         run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
 
+        
+      # 🔧 Crear carpetas vacías antes de subir artefactos
+      - name: Crear carpetas vacías
+        run: mkdir -p logs reports
+        
+
       # 5️ Ejecutar los tests automatizados
       - name: Run test
         run: python3 run_tests.py   # Corre tu script principal de pruebas
 
-      # 🔧 Crear carpetas vacías antes de subir artefactos
-      - name: Crear carpetas vacías
-        run: mkdir -p logs reports
+      - name: Run BDD tests         # ejecuta los test de behave
+        run: python run_behave.py
         
 
       # 6️ Subir artefactos generados (reporte HTML, logs, screenshots, etc.)
@@ -66,4 +71,4 @@ jobs:
         with:
           name: suite-log             # Nombre del artefacto
           path: logs/                 # Carpeta que contiene los logs
-          if-no-files-found: warn     # ← LÍNEA AGREGADA
+          if-no-files-found: warn     
