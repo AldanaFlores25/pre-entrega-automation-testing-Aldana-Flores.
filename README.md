@@ -21,6 +21,7 @@ Este proyecto tiene como objetivo **automatizar pruebas de UI y API** para el si
 - **Faker** → generación de datos dinámicos
 - **Logging**
 - **CSV / JSON** para datos externos
+- **GitHub Actions/CI** para una integracion continua y correr todas las pruebas cada vez que se hace un push
 
 ---
 
@@ -133,3 +134,5 @@ Registro completo en logs
 Buena organización de carpetas y datos
 
 Permite agregar nuevos tests de forma simple sin alterar el núcleo del framework, garantizando buenas prácticas y extensibilidad en el tiempo.
+
+Permite correr todas las pruebas cada vez que se hace una actualiza y asi detectar cualquiero posible error en el menor tiempo posible
